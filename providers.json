@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Carlos María Isidro",
+        "cif": "12345-CMI",
+        "direction": "Avda. Reyes Católicos, 54"
+    },
+    {
+        "name": "Julio Ruiz Mateos",
+        "cif":"67890-JRM",
+        "direction": "Avda. Payaso Fofó, 13"
+    },
+    {
+        "name": "Margarita de Austria",
+        "cif": "12345-MDA",
+        "direction": "Calle Constitución, 13"
+    }
+]
