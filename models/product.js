@@ -7,7 +7,7 @@ const objectSchema = {
     rating: Number,
     price: Number,
     picture: String,
-    provider_id: { type: Schema.ObjectId, ref: Provider }
+    provider: { type: Schema.ObjectId, ref: Provider }
 }
 
 const productSchema = mongoose.Schema(objectSchema);
