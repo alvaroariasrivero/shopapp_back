@@ -7,6 +7,8 @@ const objectSchema = {
     rating: Number,
     price: Number,
     picture: String,
+    id: String,
+    description: String,
     provider: { type: Schema.ObjectId, ref: Provider }
 }
 

@@ -25,6 +25,16 @@ const getProductsByName = async(req, res) => {
     }
 }
 
+const getProductById = async (req, res) => {
+    let data;
+    try {
+        data = await Product.find({'id': req.params.id}, '-_id').populate('provider', '-_id');
+        res.status(200).json(data);
+    } catch (error) {
+        res.status(400).json({"error":error});
+    }
+}
+
 const getProductsByProvider = async(req, res) => {
     let data;
     try {
@@ -39,7 +49,8 @@ const getProductsByProvider = async(req, res) => {
 const getProducts = {
     getAllProducts,
     getProductsByName,
-    getProductsByProvider
+    getProductsByProvider,
+    getProductById
 }
 
 module.exports = getProducts;
