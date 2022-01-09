@@ -18,7 +18,7 @@ const getProductsByName = async(req, res) => {
     let data;
     try {
         const regex = new RegExp(escapeRegex(req.params.name), 'gi')
-        data = await Product.find({'name': regex}, '-_id').populate('provider', '-_id');
+        data = await Product.find({$or:[{'name': regex}, {'trademark': regex}]}, '-_id').populate('provider', '-_id');
         res.status(200).json(data);
     } catch (error) {
         res.status(400).json({"error":error});

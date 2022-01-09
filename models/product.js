@@ -9,6 +9,7 @@ const objectSchema = {
     picture: String,
     id: String,
     description: String,
+    trademark: String,
     provider: { type: Schema.ObjectId, ref: Provider }
 }
 
